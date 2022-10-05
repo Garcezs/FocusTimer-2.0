@@ -198,10 +198,10 @@ footer {
     }
     
     .sounds button {
-        background: #bcccf5;
+        background: #29292E;
     }
 
-    .controls svg path {
+    svg path {
         fill: white;
     }
 
