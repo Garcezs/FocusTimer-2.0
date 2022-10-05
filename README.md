@@ -17,7 +17,7 @@
 
 ## Demonstração
 
-focustimergz.netlify.app
+https://focustimergz.netlify.app/
 
 ## Referencia do desafio 
 
