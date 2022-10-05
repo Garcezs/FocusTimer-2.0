@@ -13,11 +13,11 @@
 ### Dark mode
 - Desktop
 
-![App Screenshot](https://i.imgur.com/w7PxIn5.png)
+![App Screenshot](https://i.imgur.com/Qo4ZBdc.png)
 
 - Mobile
 
-![App Screenshot](https://i.imgur.com/DoEHLxJ.png)
+![App Screenshot](https://i.imgur.com/WdPgtZp.png)
 
 
 ## Demonstração
