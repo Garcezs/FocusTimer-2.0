@@ -5,13 +5,18 @@
 ### Light mode
 - Desktop
 ![App Screenshot](https://i.imgur.com/m26cPdg.png)
+
 - Mobile
+
 ![App Screenshot](https://i.imgur.com/EfV23xM.png)
 
 ### Dark mode
 - Desktop
+
 ![App Screenshot](https://i.imgur.com/w7PxIn5.png)
+
 - Mobile
+
 ![App Screenshot](https://i.imgur.com/DoEHLxJ.png)
 
 
