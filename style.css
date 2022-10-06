@@ -144,6 +144,16 @@ button:hover {
     transform: scale(1.1); 
 }
 
+button:hover .slider {
+    background: white;
+}
+button:hover .slider::-moz-range-thumb {
+    background: white;
+}
+button:hover .slider::-webkit-slider-thumb {
+    background: white;
+}
+
 .sounds .rain:hover,
 .sounds .rain:active{
     background-color: var(--bg-SoundRainButtonHover);

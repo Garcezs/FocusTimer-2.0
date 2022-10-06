@@ -8,7 +8,7 @@ function updateTimer(minutes, seconds) {
 }
 
 function resetTimer() {
-  updateTimer(minutes, 0)
+  updateTimer(0, 0)
   clearTimeout(timerTimeOut)
 }
 
