@@ -1,29 +1,11 @@
 # FocusTimer 2.0v1 // desafio Stage 05 
 
-## Screenshots
+### Demo
 
-### Light mode
-- Desktop
-![App Screenshot](https://i.imgur.com/m26cPdg.png)
-
-- Mobile
-
-![App Screenshot](https://i.imgur.com/EfV23xM.png)
-
-### Dark mode
-- Desktop
-
-![App Screenshot](https://i.imgur.com/Qo4ZBdc.png)
-
-- Mobile
-
-![App Screenshot](https://i.imgur.com/WdPgtZp.png)
-
-
-## Demonstração
+![App Screenshot](https://i.imgur.com/CULimzW.gif)
 
 https://focustimergz.netlify.app/
 
 ## Referencia do desafio 
 
-https://www.figma.com/file/Pw8yMsK7HFkD6aISZt6gPA/Stage-05---Focus-Timer-2.0/duplicate
+https://www.figma.com/file/nlJJAVuGDc1tnDKqUW4FJA/Stage-05---Dark-Mode-FocusTimer/duplicate
