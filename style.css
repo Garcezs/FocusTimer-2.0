@@ -14,6 +14,10 @@
     --bg-SoundCoffeeButtonHover: rgb(85, 67, 67);
 
     --bg-darkmode: #020416;
+    --bg-darkSoundRainButtonHover: hsla(195, 74%, 15%, 1);
+    --bg-darkSoundForestButtonHover: #016820;
+    --bg-darkSoundFireButtonHover: #7a0303;
+    --bg-darkSoundCoffeeButtonHover: rgb(65, 49, 49);
 }
 
 body {
@@ -21,6 +25,10 @@ body {
 
     min-height: 100vh;
     display: grid;
+}
+
+.hide {
+    display: none;
 }
 
 .container {
@@ -52,7 +60,6 @@ main {
     gap: 4rem;
 }
 
-
 footer {
     transition: ease all .5s;
 }
@@ -75,7 +82,7 @@ footer {
 
 .sounds button {
     border: 0;
-    padding: 4.8rem 4.3rem;
+    padding: 2.4rem 4.3rem 7rem;
     border-radius: 2.4rem;
     background: var(--bg-SoundButton);
 
@@ -87,14 +94,59 @@ footer {
 
 }
 
+button {
+    transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
 
+.slider {
+    -webkit-appearance: none;
+    top: 11.5rem;
+    position: absolute;
+    width: 9rem;
+    height: .4rem;
+    border-radius: 5px;  
+    background: hsla(240, 6%, 21%, 1);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    top: 11.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%; 
+    background: hsla(240, 6%, 21%, 1);
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    top: 11.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: hsla(240, 6%, 21%, 1);
+    cursor: pointer;
+}
+
+.nightAndDay .night svg path {
+    fill: white;
+}
 
 /* hover */
+button:hover {
+    transform: scale(1.1); 
+}
 
 .sounds .rain:hover,
 .sounds .rain:active{
     background-color: var(--bg-SoundRainButtonHover);
-
 }
 
 .sounds .forest:hover,
@@ -113,7 +165,7 @@ footer {
 }
 
 .play:hover svg path,
-.play:active svg path {
+.play:focus svg path {
     fill: var(--bg-SoundForestButtonHover);
     transition: 0.3s;
 
@@ -122,7 +174,6 @@ footer {
 .stop:hover svg path {
     fill: rgb(206, 2, 2);
     transition: 0.3s;
-
 }
 
 .rain:hover svg path,
@@ -137,33 +188,33 @@ footer {
 }
 
 /* animations */
- @keyframes topDown {
+@keyframes topDown {
     0% {
       transform: translateY(-300px);
     }
     100% {
       transform: translateY(0);
     }
-  }
+}
 
-  @keyframes fromRightLeft {
+@keyframes fromRightLeft {
     0% {
         transform: translateX(300px);
     }
     100%{
         transform: translateX(0);
     }
-  }
+}
 
-  @keyframes fromLeftRight {
+@keyframes fromLeftRight {
     0% {
         transform: translateX(-300px);
     }
     100%{
         transform: translateX(0);
     }
-  }
-  
+}
+
 /* mobile */
 
 @media only screen and (max-width: 900px) {
@@ -178,6 +229,11 @@ footer {
         padding-bottom: 17rem;
     }
 
+    .nightAndDay {
+        left: 84.19%;
+        animation: fromRightLeft 0.7s;
+    }
+
     .timer {
         animation: fromLeftRight 0.7s;
     }
@@ -186,23 +242,85 @@ footer {
         animation: fromRightLeft 0.7s;
     }
 
+    .slider {
+        top: 10.5rem;
+    }
+
     .sounds {
         animation: fromRightLeft 0.7s;
     }
 }
 
-@media screen and (prefers-color-scheme:dark) {
-    body {
-        background-color: var(--bg-darkmode);
-        color: white;
-    }
+/* dark mode */
+body.dark {
+    background-color: var(--bg-darkmode);
+    color: white;
+
+    transition: all .3s ease-in-out;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.nightAndDay{
+    position: absolute;
+    width: 2px;
+    left: 90.19%;
+    right: 5%;
+    top: 8.89%;
+    bottom: 86.11%;
+    cursor: pointer;
+
+    animation: fromRightLeft 0.9s;
+}
+
+body.dark .slider {
+    background: white;
+}
+
+body.dark .slider::-webkit-slider-thumb {
+    background: white;
+}
+
+body.dark .slider::-moz-range-thumb {
+    background: white;
+}
     
-    .sounds button {
-        background: #29292E;
-    }
+body.dark .sounds button {
+    background: #29292E;
+}
 
-    svg path {
-        fill: white;
-    }
+body.dark .container svg path {
+    fill: white;
+}
 
+body.dark .sounds .rain:hover,
+body.dark .sounds .rain:active{
+    background-color: var(--bg-darkSoundRainButtonHover);
+}
+
+body.dark .sounds .forest:hover,
+body.dark .sounds .forest:active {
+    background-color: var(--bg-darkSoundForestButtonHover);
+}
+
+body.dark .sounds .fire:hover,
+body.dark .sounds .fire:active {
+    background-color: var(--bg-darkSoundFireButtonHover);
+}
+
+body.dark .sounds .coffee:hover,
+body.dark .sounds .coffee:active {
+    background-color: var(--bg-darkSoundCoffeeButtonHover);
+}
+
+body.dark .stop:hover svg path {
+    fill: rgb(206, 2, 2);
+}
+
+body.dark .play:hover svg path,
+body.dark .play:focus svg path {
+    fill: var(--bg-SoundForestButtonHover);
 }
