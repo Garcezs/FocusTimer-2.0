@@ -2,7 +2,7 @@
 
 ### Demo
 
-![App Screenshot](https://i.imgur.com/NENNOTU.gif)
+![App Screenshot](https://i.imgur.com/CJDULSk.gif)
 
 https://focustimergz.netlify.app/
 
