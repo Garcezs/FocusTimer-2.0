@@ -1,21 +1,23 @@
-export default function events({sound, timer, buttonPlay, buttonStop, buttonAddFiveMinutes, buttonRemoveFiveMinutes, nightModeButton, dayModeButton, forestSoundButton, rainSoundButton, coffeeShopSoundButton, fireSoundButton, chk}) {
+export default function events({sound, timer, controls, buttonPlay, buttonPause, buttonStop, buttonAddFiveMinutes, buttonRemoveFiveMinutes, nightModeButton, dayModeButton, forestSoundButton, rainSoundButton, coffeeShopSoundButton, fireSoundButton, chk}) {
     buttonPlay.addEventListener('click', function() {  
-      sound.pressButton()
+      controls.play()
       timer.countdown()
+    })
+
+    buttonPause.addEventListener('click', ()=>{
+      controls.pause()
+      timer.hold()
     })
     
     buttonStop.addEventListener('click', ()=>{
-      sound.pressButton()
       timer.resetTimer()
     })
     
     buttonAddFiveMinutes.addEventListener('click', ()=>{
-      sound.pressButton()
       timer.addTime()
     })
     
     buttonRemoveFiveMinutes.addEventListener('click', ()=>{
-      sound.pressButton()
       timer.removeTime()
     })
     

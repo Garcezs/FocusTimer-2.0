@@ -103,7 +103,7 @@ button {
 }
 
 .slider {
-    -webkit-appearance: none;
+    -moz-webkit-appearance: none;
     top: 11.5rem;
     position: absolute;
     width: 9rem;

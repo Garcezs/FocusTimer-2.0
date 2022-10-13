@@ -56,10 +56,15 @@ function countdown(){
     }, 1000)
 }
 
+function hold() {
+  clearTimeout(timerTimeOut)
+}
+
 return {
   resetTimer,
   addTime,
   removeTime,
   countdown,
+  hold
 }
 }
