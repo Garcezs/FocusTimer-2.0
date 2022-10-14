@@ -1,4 +1,4 @@
-# FocusTimer 2.0v1 // desafio Stage 05 
+# FocusTimer 2.0 // desafio Stage 05 
 
 ### Demo
 
